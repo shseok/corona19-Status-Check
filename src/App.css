@@ -1,0 +1,66 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 1rem 2rem;
+  background: #3b5998;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > h1 {
+  color: #fff;
+}
+
+.header select {
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+section {
+  padding: 1rem;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.bar {
+  padding: 20px 20px 40px 20px;
+  border: 2px solid grey;
+  border-radius: 1rem;
+  margin: auto;
+  height: 40vh;
+  width: 40vw;
+}
+.line {
+  padding: 20px 20px 40px 20px;
+  border: 2px solid grey;
+  border-radius: 1rem;
+  margin: 20px auto;
+  height: 40vh;
+  width: 40vw;
+}
+.doughnut1 {
+  padding: 20px 190px 190px 190px;
+  border: 2px solid grey;
+  border-radius: 1rem;
+  margin: auto;
+  height: 20vh;
+  width: 20vw;
+}
+.doughnut2 {
+  padding: 20px 190px 190px 190px;
+  border: 2px solid grey;
+  border-radius: 1rem;
+  margin: auto;
+  height: 20vh;
+  width: 20vw;
+}
