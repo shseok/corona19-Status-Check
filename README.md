@@ -12,6 +12,7 @@
 
 ```
 $ git clone https://github.com/shseok/corona19-Status.git
+$ cd .\corona19-Status-Check\
 $ npm install
 $ npm start
 ```
