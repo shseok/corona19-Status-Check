@@ -1,4 +1,4 @@
-## My Corona Status Check App
+## My Corona Status(KR) Check App
 
 ## 기능
 
@@ -18,53 +18,56 @@ $ npm start
 
 ## 실행과정
 
+```
 1. npx create-react-app .
-
-> 현재 폴더(corona-19)에서 리액트 프로젝트가 생성 2. npm start
-
-> develpopment mode
-> loaclhost:3000 open
+   *현재 폴더(corona-19)에서 리액트 프로젝트가 생성
 
 2. npm start
+   *develpopment mode
+   *loaclhost:3000 open
 
-> develpopment mode
-> loaclhost:3000 open
+3. App.js, App.css 수정 / Contents.js, Header.js - Components 생성
 
-\*react - 코드의 tag에 클래스를 줄때 className으로
+4. axios 사용 - api GET
+```
 
-rafce -> snippet
+## 유용한 기능 및 도움받은 기능
 
-react hook : useState(데이터를 담아 배열관리), useEffect(fetch API를 사용)
+> rafce -> snippet
+> react hook : useState(데이터를 담아 배열관리), useEffect(fetch API를 사용)
+> axios lib : for 'API 요청'
+> react-chartjs-2 : for 'chart'
+> chart.js 와 react chart.js 를 search해서 option들을 확인
+> POST (app): for 'API 데이터 확인'
+> covid19api.com : document on post (다양한 api를 제공한다)
 
-axios lib : for API 요청
-\*ref : https://github.com/axios/axios
-react-chartjs-2 : for chart
+## 주의사항
 
-<code>
+> use Effect 사용시 두 번째 인자에 빈 배열을 줄 것
+> react 코드의 tag에 클래스를 줄때 className으로 줄것
+> covid19api.com - 데이터의 시차가 존재 (단, 데이터의 수치는 국내에서 제공하는 것과 일치)
+
+```
 const fetchEvents = () => {
 const res = axios.get("https://api.covid19api.com/total/dayone/country/kr")
 console.log(res);
 }
 fetchEvents();
-</code>
-위 처럼 사용하면 데이터인 res가 불러오기 전에 호출하므로 promise가 console에 나타난다.
-<code>
+```
+
+위 처럼 사용하면 res(데이터)가 불러오기 전에 호출하므로 promise가 console에 나타난다.
+
+```
 const fetchEvents = async() => {
             const res = await axios.get("https://api.covid19api.com/total/dayone/country/kr")
             console.log(res);
         }
         fetchEvents();
-</code>
+```
 
-chart.js 와 react chart.js 를 search해서 option들을 확인!
+따라서 async와 await을 사용하여 해결할 수 있다.
 
-POST 사용
-
-// covid19api.com > document on post
-데이터의 시차가 존재
-단, 데이터의 수치는 국내에서 제공하는 것과 일치
-
-다양한 api를 제공한다
+다른 방법: 1. chaining을 사용 (ex.then) 2. fetch와 then을 이용해서 chaining을 사용
 
 ## 개선사항
 
@@ -78,3 +81,5 @@ https://gist.github.com/ihoneymon/652be052a0727ad59601
 https://www.chartjs.org/docs/latest/
 https://github.com/reactchartjs/react-chartjs-2/pulls
 https://developer.mozilla.org/en-US/docs/Web/CSS
+https://daep93.tistory.com/7
+https://covid19api.com/
