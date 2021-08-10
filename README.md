@@ -34,18 +34,26 @@ $ npm start
 ## 유용한 기능 및 도움받은 기능
 
 > rafce -> snippet
-> react hook : useState(데이터를 담아 배열관리), useEffect(fetch API를 사용)
-> axios lib : for 'API 요청'
-> react-chartjs-2 : for 'chart'
-> chart.js 와 react chart.js 를 search해서 option들을 확인
-> POST (app): for 'API 데이터 확인'
-> covid19api.com : document on post (다양한 api를 제공한다)
+>
+> > react hook : useState(데이터를 담아 배열관리), useEffect(fetch API를 사용)
+> >
+> > > axios lib : for 'API 요청'
+> > >
+> > > > react-chartjs-2 : for 'chart'
+> > > >
+> > > > > chart.js 와 react chart.js 를 search해서 option들을 확인
+> > > > >
+> > > > > > POST (app): for 'API 데이터 확인'
+> > > > > >
+> > > > > > > covid19api.com : document on post (다양한 api를 제공한다)
 
 ## 주의사항
 
 > use Effect 사용시 두 번째 인자에 빈 배열을 줄 것
-> react 코드의 tag에 클래스를 줄때 className으로 줄것
-> covid19api.com - 데이터의 시차가 존재 (단, 데이터의 수치는 국내에서 제공하는 것과 일치)
+>
+> > react 코드의 tag에 클래스를 줄때 className으로 줄것
+> >
+> > > covid19api.com - 데이터의 시차가 존재 (단, 데이터의 수치는 국내에서 제공하는 것과 일치)
 
 ```
 const fetchEvents = () => {
